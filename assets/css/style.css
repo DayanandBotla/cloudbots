@@ -11,6 +11,12 @@
     object-fit: contain;
 }
 
+.cta-nav{
+    background: var(--primaryColor);
+    color: #FFF;
+    border-radius: 20px;
+    text-align: center;
+}
 .navbar {
     padding: 0;
 
