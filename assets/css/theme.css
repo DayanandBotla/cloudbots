@@ -1,0 +1,16 @@
+body{  font-family: "Rubik", sans-serif;   color: var(--bodyTxt); }
+:root{
+  
+    --bodyTxt:#778ca3;
+    --primaryColor:#3498db;
+    --bs-primary:var(--primaryColor);
+    --bs-primary-rgb:var(--primaryColor);
+    --topHeaderBg:#ecf0f1;
+    --gradBg:linear-gradient(to right, #c471ed, var(--primaryColor));
+
+}
+
+
+.btn-primary{
+    --bs-btn-bg: var(--primaryColor);
+}

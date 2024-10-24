@@ -1,0 +1,272 @@
+
+@import url(./theme.css);
+
+.navbar {
+    margin-bottom: 20px;
+  }
+
+.navbar-brand.logo img {
+    max-width: 250px;
+    max-height: 50px;
+    object-fit: contain;
+}
+
+.navbar {
+    padding: 0;
+
+    background: #FFF;
+    box-shadow: -2px 0px 8px 0px rgba(42, 7, 70, .02), 2px 6px 8px 0px rgba(42, 7, 70, .04)
+}
+
+.logo {
+    padding: 4px;
+    background: #FFF;
+    border-radius: 8px;
+}
+
+h1 {
+    color: var(--primaryColor);
+}
+
+
+.tools-weteach__logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.tools-weteach img {
+    max-height: 65px;
+    max-width: 165px;
+    object-fit: contain;
+    padding: 10px 20px;
+}
+
+.btn {
+    border-radius: 10em;
+}
+
+.btn-cta {
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 500;
+    background: #FFF;
+    color: var(--primaryColor);
+}
+
+.btn-cta:hover {
+    background: var(--primaryColor);
+    color: #FFF;
+}
+
+.btn-cta img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.cta-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 20px;
+}
+
+@media (max-width: 767px) and (orientation: portrait),
+(max-width: 896px) and (orientation: landscape) {
+    .tools-weteach img {
+        max-height: 50px;
+        padding: 10px 15px;
+    }
+}
+
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.hero-banner__img,
+.hero-banner__text {
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.hero-banner__img {
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    height: 100%;
+    margin-left: -100px;
+
+}
+
+.hero-banner__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-banner__text {
+
+    background: var(--gradBg);
+
+}
+
+.hero-banner__text h1,
+.hero-banner__text p {
+    color: #FFFFFF;
+}
+
+.hero-banner__text h1 {
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-banner__text h1 span {
+    font-weight: 700;
+}
+
+@media (max-width: 576px) {
+    .hero-banner__img {
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px) and (orientation: portrait),
+(max-width: 896px) and (orientation: landscape) {
+
+    .hero-banner__img,
+    .hero-banner__text {
+        padding: 20px;
+        border-radius: 20px;
+    }
+}
+
+.headline {
+    font-weight: 400;
+    /* display: flex;
+    flex-direction: column;  */
+    margin-bottom: 20px;
+}
+
+.headline span {
+    font-weight: 700;
+    color: var(--primaryColor);
+    background: var(--gradBg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.leeadtxt {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+.section-gaps {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.whywe .icn {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+}
+
+.whywe .icn img {
+    object-fit: contain;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    background: var(--gradBg);
+    color: #FFFFFF;
+    padding: 40px 40px 0;
+    border-radius: 20px;
+}
+
+.bullets {
+    padding: 40px
+}
+
+.bullets li {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.bottom-ribbon {
+
+    background: var(--primaryColor);
+    background: var(--gradBg);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+footer {
+    background: var(--topHeaderBg);
+
+}
+
+
+.footerlink {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.linkbox--heading {
+    color: #4b6584;
+}
+
+.linkbox li a {
+    color: #778ca3;
+    text-decoration: none;
+}
+
+.linkbox li a:hover {
+    color: #4b6584;
+    text-decoration: underline;
+}
+
+.linkbox ul {
+    margin: 16px 0 0;
+    padding: 0 0 0 20px;
+}
+
+.linkbox li {
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+
+.footer-logo {
+    min-width: 250px;
+}
+
+.footer-logo img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
