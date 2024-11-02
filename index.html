@@ -44,6 +44,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="./assets/css/style.css" rel="stylesheet">
 
+        <!-- Load EmailJS SDK -->
+        <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                if (typeof emailjs !== "undefined") {
+                    emailjs.init("cneV1eWSXUoAlR9wS"); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+                } else {
+                    console.error("EmailJS SDK failed to load.");
+                }
+            });
+        </script>
+
+ 
 
     <style>
 
@@ -429,7 +442,7 @@
 
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <form id="registrationForm" action="/assets/js/send_email.php" method="POST" onsubmit="showThankYouMessage()">
+                        <form id="contactForm"  method="POST" onsubmit="showThankYouMessage()">
                             <div class="mb-4">
                                 <label for="fullName" class="form-label">Full Name</label>
                                 <input type="text" class="form-control" id="fullName" name="fullName" required />
@@ -553,7 +566,7 @@
 
 
     <script src="./assets/js/submit_form.js"></script>
-
+    
     <!-- Bootstrap 5 JavaScript and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
