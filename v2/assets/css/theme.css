@@ -1,0 +1,24 @@
+body{ 
+     font-family: "Roboto", sans-serif;   
+     color: var(--bodyTxt); 
+     background: #FFFFFF; 
+     font-size: 16px;
+     font-weight: 300;
+
+}
+:root{
+  
+    --bodyTxt:#455A64;
+    --primaryColor:#3498db;
+    --bs-primary:var(--primaryColor);
+    --bs-primary-rgb:var(--primaryColor); 
+    --c1:#0585ff ;
+    --c2:#ab18ff;
+    --gradBg:linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    --gradBg2:linear-gradient(-20deg, var(--c2) 0%, var(--c1) 100%);
+    --gradBg3:linear-gradient(-45deg, var(--c1) 0%, var(--c2) 100%);
+    --footerBg:#263238;
+    --bgHighlight:#ecf0f1a1;
+
+
+}
