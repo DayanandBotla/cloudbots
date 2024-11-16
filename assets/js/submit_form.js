@@ -19,17 +19,64 @@ function formatDate(date) {
     return date.toLocaleDateString('en-US', options).replace(/ /g, '-'); // Format: "03-November-2024"
 }
 
+const inputs = document.querySelectorAll(".form-control, .form-select");
+inputs.forEach((input) => {
+    input.addEventListener("blur", () => {
+        // If the field is invalid after losing focus
+        if (!input.checkValidity()) {
+            input.classList.add("is-invalid");
+            input.classList.remove("is-valid");
+        } else {
+            input.classList.add("is-valid");
+            input.classList.remove("is-invalid");
+        }
+    });
+
+    // Remove invalid class on user input
+    input.addEventListener("input", () => {
+        if (input.checkValidity()) {
+            input.classList.add("is-valid");
+            input.classList.remove("is-invalid");
+        }
+    });
+});
+
+
+    // Custom date formatting function
+    function formatDate(date) {
+        const options = {
+            day: '2-digit', 
+            month: 'short', 
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true // This will use 12-hour format with AM/PM
+        };
+        
+        // Format the date and time using Intl.DateTimeFormat
+        const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+        return formattedDate;
+    }
+
+
 // Submit form event listener 
 // Function to handle the form submission
 function submitForm(event) {
+ 
     event.preventDefault();  // Prevent the form from reloading the page
+
+        // Get the current date and format it
+        var dateTime = new Date();
 
     // Get form field values
     var fullName = document.getElementById("fullName").value;
     var mobileNumber = document.getElementById("mobileNumber").value;
     var email = document.getElementById("email").value;
     var course = document.getElementById("courseSelect").value;
-    var date = new Date().toLocaleDateString();  // Get current date
+    var date = formatDate(dateTime); // Get current date
+
+    console.log(date, 'date')
 
     // Create an object with form data to send to EmailJS
     var formData = {
@@ -56,6 +103,11 @@ function submitForm(event) {
             // Reset the form
             form.reset();
 
+               // Remove validation classes
+               inputs.forEach((input) => {
+                input.classList.remove("is-valid", "is-invalid");
+            });
+
 
              // Hide the thank-you message after 5 seconds and show the form again
              setTimeout(() => {
@@ -70,4 +122,5 @@ function submitForm(event) {
             alert("There was an issue sending your message. Please try again.");
         }
     );
+
 }

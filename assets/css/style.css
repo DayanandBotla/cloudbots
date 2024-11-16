@@ -521,6 +521,17 @@ footer {
     color: #270;
 }
 
+/* Styling for invalid fields */
+.is-invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+/* Styling for valid fields */
+.is-valid {
+    border: 2px solid green;
+    background-color: #e6ffe6;
+}
 
 @media (max-width: 767px) and (orientation: portrait),
 (max-width: 896px) and (orientation: landscape) {
@@ -546,3 +557,4 @@ footer {
         height: 24px;
     }
 }
+
