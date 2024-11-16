@@ -44,24 +44,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="./assets/css/style.css" rel="stylesheet">
 
-        <!-- Load EmailJS SDK -->
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                if (typeof emailjs !== "undefined") {
-                    emailjs.init("cneV1eWSXUoAlR9wS"); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
-                } else {
-                    console.error("EmailJS SDK failed to load.");
-                }
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "D_s3sVLRX2lwaF8vk",
             });
-        </script>
-
- 
-
-    <style>
-
-    </style>
+        })();
+    </script>
 
 </head>
 
@@ -195,7 +188,8 @@
                         <p><img src="./assets/img/icon/clock.svg" /> <b>Duration :</b> 45 days</p>
                         <p> <img src="./assets/img/icon/display.svg" /> <b>Mode Of Training :</b> Online</p>
 
-                        <a href="#" class=" cta cta-primary-outline   w-100 mt-3">See Training Outline</a>
+                     
+                        <a href="./assets/brouchure/aws.pdf" download="./assets/brouchure/aws.pdf" class=" cta cta-primary-outline   w-100 mt-3">Download Training Outline</a>
                         <a href="#contact-us" class="cta cta-primary  w-100 mt-3">Join the Free Workshop</a>
                     </div>
 
@@ -208,7 +202,7 @@
                         <p> <img src="./assets/img/icon/clock.svg" /> <b>Duration :</b> 45 days</p>
                         <p> <img src="./assets/img/icon/display.svg" /> <b>Mode Of Training :</b> Online</p>
 
-                        <a href="#" class=" cta cta-primary-outline   w-100 mt-3">See Training Outline</a>
+                        <a href="./assets/brouchure/devops.pdf" download="./assets/brouchure/devops.pdf" class=" cta cta-primary-outline   w-100 mt-3">Download Training Outline</a>
                         <a href="#contact-us" class="cta cta-primary  w-100 mt-3">Join the Free Workshop</a>
                     </div>
 
@@ -221,7 +215,7 @@
                         <p> <img src="./assets/img/icon/clock.svg" /> <b>Duration :</b> 45 days</p>
                         <p> <img src="./assets/img/icon/display.svg" /> <b>Mode Of Training :</b> Online</p>
 
-                        <a href="#" class=" cta cta-primary-outline   w-100 mt-3">See Training Outline</a>
+                        <a href="./assets/brouchure/cybersecurity.pdf" download="./assets/brouchure/cybersecurity.pdf"  class=" cta cta-primary-outline   w-100 mt-3">Download Training Outline</a>
                         <a href="#contact-us" class="cta cta-primary  w-100 mt-3">Join the Free Workshop</a>
                     </div>
 
@@ -233,7 +227,7 @@
                         <p> <img src="./assets/img/icon/clock.svg" /> <b>Duration :</b> 45 days</p>
                         <p> <img src="./assets/img/icon/display.svg" /> <b>Mode Of Training :</b> Online</p>
 
-                        <a href="#" class=" cta cta-primary-outline   w-100 mt-3">See Training Outline</a>
+                        <a href="#" class=" cta cta-primary-outline   w-100 mt-3">Download Training Outline</a>
                         <a href="#contact-us" class="cta cta-primary  w-100 mt-3">Join the Free Workshop</a>
                     </div>
 
@@ -275,18 +269,18 @@
                 <h2 class="section-headline">Why Choose CloudBots</h2>
 
                 <div class="row">
-                    <div class="col-md-6 col-12">
+                    <div class="col-lg-6 col-12">
                         <div class="highlight">
                             <h5 class="text-white">We aim to stay constantly updated.</h5>
                             <p>A common issue with many other DevOps training platforms is that they
                                 often stop updating
                                 their content. Companies may expand quickly but then neglect to refresh their courses or
                                 add new modules.</p>
-                            <img src="./assets/img/skills-updated.svg" class="img-fluid">
+                            <img src="./assets/img/skills-updated.svg" class="img-fluid why-img">
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-12">
+                    <div class="col-lg-6 col-12">
                         <div class="bullets">
                             <h5>CloudBots courses are built to be accessible, easy to understand, and simple to
                                 implement.
@@ -332,11 +326,11 @@
                     customized, industry-relevant courses.</p>
 
                 <div class="partnerWithUs--item row pb-5">
-                    <div class="col-12 col-sm-6 col-md-5 pb-2">
+                    <div class="col-12   col-lg-5 pb-2">
                         <img src="./assets/img/courses/aws-training.webp"
                             alt="Skills Training for Educational Institutions" class="img-fluid " />
                     </div>
-                    <div class="col-12 col-sm-6 col-md-7">
+                    <div class="col-12 col-lg-7">
                         <h5>Skills Training for Educational Institutions</h5>
                         <p>Upskill your students using our tailor made and industry relevant Courses. <b>Cloudbots</b>
                             has designed a comprehensive curriculum for students to pursue and excel along with their
@@ -351,11 +345,11 @@
 
 
                 <div class="partnerWithUs--item row  ">
-                    <div class="col-12 col-sm-6 col-md-5 pb-2">
+                    <div class="col-12 col-lg-5 pb-2">
                         <img src="./assets/img/courses/corporate-training.jpg"
                             alt="Tailored Learning Programs for Corporate Professionals" class="img-fluid " />
                     </div>
-                    <div class="col-12 col-sm-6 col-md-7 pb-2">
+                    <div class="col-12   col-lg-7 pb-2">
                         <h5>Tailored Learning Programs for Corporate Professionals</h5>
 
                         <p> Corporate Companies strive very hard to keep its resources in-time with the improvements in
@@ -438,25 +432,35 @@
         <section class="  section-gaps contact-us" id="contact-us">
             <div class="container">
                 <h2 class="section-headline">Unlock Your Potential with CloudBots</h2>
-                <p class="lead-title text-center pb-4">You are one step closer to building a thriving career as DevOps Engineer!</p>
+                <p class="lead-title text-center pb-4">You are one step closer to building a thriving career as DevOps
+                    Engineer!</p>
 
 
                 <div class="row">
-                    <div class="col-12 col-md-6">
-                        <form id="contactForm"  method="POST" onsubmit="showThankYouMessage()">
+                    <div class="col-12 col-lg-6 pb-5">
+
+
+                        <div id="thankYouMessage" class="alert alert-success mt-3" style="display:none;">
+                            <h4>Thank you for your submission!</h4>
+                            <p> We've received your message and will get back to you shortly.</p>
+                            <p>For quick contact you can call us at <a href="tel:+919052168470"><b>+91 90521 68470</b></a></p>
+                        </div>
+
+                        <form id="contactForm"   method="POST" onsubmit="submitForm(event)">
                             <div class="mb-4">
                                 <label for="fullName" class="form-label">Full Name</label>
                                 <input type="text" class="form-control" id="fullName" name="fullName" required />
                             </div>
                             <div class="mb-4">
                                 <label for="mobileNumber" class="form-label">Mobile Number</label>
-                                <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber" pattern="[6789][0-9]{9}" oninput="validateMobileNumber(this)" required />
-                                <div class="form-text">Enter a 10-digit mobile number.</div>
+                                <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber"
+                                    pattern="[6789][0-9]{9}" required />
+                                <!-- <div class="form-text">Enter a 10-digit mobile number.</div> -->
                             </div>
                             <div class="mb-4">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" required />
-                             </div>
+                            </div>
                             <div class="mb-4">
                                 <label for="courseSelect" class="form-label">Select a Course</label>
                                 <select class="form-select" id="courseSelect" name="course" required>
@@ -467,17 +471,16 @@
                                     <option value="Linux">Linux</option>
                                 </select>
                             </div>
-                             <!-- Hidden field for the date -->
-        <input type="hidden" id="date" name="date">
-                            <button type="submit" class="cta  cta-primary w-100 mt-2">Submit</button>
+                            <input type="hidden" id="date" name="date">
+                            <button type="submit" class="cta cta-primary w-100 mt-2">Submit</button>
                         </form>
-                        <div id="thankYouMessage" class="alert alert-success mt-3" style="display:none;">
-                            <h2>Thank you for your submission!</h2>
-                            <p> We've received your message and will get back to you shortly.</p>
-                            <p>Your journey to mastering new skills starts here!</p>
-                        </div>
+
+ 
+
+
+
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-lg-6">
                         <img alt="Job seeker" class="img-fluid" src="./assets/img/job-seeker2.jpg" />
                     </div>
                 </div>
@@ -488,7 +491,7 @@
 
             </div>
         </section>
- 
+
 
     </main>
 
@@ -547,7 +550,7 @@
                 </div>
 
 
-             
+
 
 
             </div>
@@ -569,7 +572,7 @@
 
 
     <script src="./assets/js/submit_form.js"></script>
-    
+
     <!-- Bootstrap 5 JavaScript and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
