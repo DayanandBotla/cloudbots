@@ -19,6 +19,7 @@ body{
     --gradBg3:linear-gradient(-45deg, var(--c1) 0%, var(--c2) 100%);
     --footerBg:#263238;
     --bgHighlight:#ecf0f1a1;
+    --h:#0585ff1A;
 
 
 }

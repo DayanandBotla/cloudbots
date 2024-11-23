@@ -8,8 +8,7 @@
   }
 
 .navbar-brand.logo img {
-    max-width: 250px;
-    max-height: 50px;
+    max-height: 75px;
     object-fit: contain;
 }
 .nav-item{
@@ -57,7 +56,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;     
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 103px);
 }
 .herobanner-bg{
     flex: 1;
@@ -68,12 +67,12 @@
 }
 .herobanner h5{
     font-weight: 300;
-    font-size: clamp(24px, 2vw, 32px);
+    font-size: clamp(24px, 2.5vw, 40px);
 
 }
 .herobanner h1{
     font-weight: 900;
-    font-size: clamp(48px, 4vw, 52px);
+    font-size: clamp(48px, 5vw, 72px);
 
     background: var(--gradBg);
     background: linear-gradient(
@@ -101,7 +100,7 @@ var(--c1) 90%
     }
   }
 
-.herobanner p{  font-size: clamp(18px, 1.5vw, 24px);  font-weight: 300;}
+.herobanner p{  font-size: clamp(18px, 1.75vw, 36px);  font-weight: 300;}
 .cta-row{
     gap: 20px;
     display: flex;
@@ -127,6 +126,7 @@ var(--c1) 90%
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
 }
 .cta-primary{
@@ -209,13 +209,42 @@ var(--c1) 90%
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px 40px;
+    background: var(--gradBg2);
+    border-radius: 50px;
 }
 .company-logos img{
     width: auto;
-    height: 32px;
+    max-width: 120px;
+    height: 40px;
     object-fit: contain;
+    filter: brightness(0) invert(1);
+
 
 }
+.swiper.marquee-swiper {
+   padding: 24px 0;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      white 10%,
+      white 90%,
+      transparent 100%
+    );
+  }
+  
+
+.marquee-swiper .swiper-slide {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.swiper-wrapper.marquee-wrapper {
+    transition-timing-function: linear !important;
+    align-items: center;
+  }
+  
 /* ourStudentsHired ends */
 
 
@@ -255,6 +284,28 @@ var(--c1) 90%
     border-radius: 10px;
 }
 
+.icon-img{
+    width: 20px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+.cta-row2{
+    display: flex;
+    gap: 10px;
+}
+.cta-row2 a{
+    font-size: 16px;
+}
+.h{margin: 0;}
+.h span{
+    background: var(--h);
+    font-weight: 400;
+    padding: 4px 8px 4px 4px;
+    border-radius: 30px; 
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
 
 .exploreOurProgrammes__list .cta{
     width: 100%;
@@ -332,6 +383,20 @@ a:hover{color: var(--c2);}
 .highlight,
 .partnerWithUs img{
     border-radius: 10px;
+    max-width: 500px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.img-right{
+    float: right;
+    margin-left: 20px;
+ 
+}
+
+.img-left{
+    float: left;
+    margin-right: 20px; 
 }
 
 
@@ -343,8 +408,45 @@ a:hover{color: var(--c2);}
 .partnerWithUs p,
 .highlight p,
 .bullets p{
+    font-size: 20px;
     line-height: 1.8;
 }
+
+.partnerWithUs{
+    position: relative;
+}
+
+
+.partnerWithUs::before,
+.partnerWithUs::after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+
+   
+ }
+ .partnerWithUs::before{
+    background: var(--gradBg2);
+    z-index: -1;
+ }
+ .partnerWithUs::after{
+    background: url(../img/bg1.jpg); 
+    opacity: .5;
+    z-index: -1;
+ }
+
+ .partnerWithUs .cta{
+    min-width: 300px;
+ }
+ .bg-white{
+    background: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+
+ }
  .lead-title{
     font-size: 20px;
 }
@@ -359,6 +461,7 @@ a:hover{color: var(--c2);}
 
 /* COmmmon for all ends */
 
+ 
 
 /* success-stories */
 
@@ -533,8 +636,37 @@ footer {
     background-color: #e6ffe6;
 }
 
+.responsive-form{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.responsive-form iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.modalclose-cta{
+    float: right;
+}
+
+iframe .m7w29c{
+    display: none!important;
+}
+
 @media (max-width: 767px) and (orientation: portrait),
 (max-width: 896px) and (orientation: landscape) {
+
+    .navbar-brand.logo img{
+        max-height: 56px;
+    }
     .contact-us .container{
         border-radius: 10px;
         padding: 16px;
@@ -555,6 +687,10 @@ footer {
     }
     .company-logos img{
         height: 24px;
+    }
+
+    .marquee-swiper .swiper-slide {
+        width: 100px;
     }
 }
 
