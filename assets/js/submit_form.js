@@ -1,5 +1,5 @@
  
-
+ 
 function validateMobileNumber(input) {
     const regex = /^[6789]\d{9}$/;
     if (!regex.test(input.value)) {
@@ -62,6 +62,37 @@ inputs.forEach((input) => {
     }
 
 
+    const courseLinks = document.querySelectorAll('.courseLink');
+    const form = document.getElementById("contactForm");
+    const thankYouMessage = document.getElementById("thankYouMessage");
+    var myModal = new bootstrap.Modal(document.getElementById('timerModal'));
+
+    let userPdfJourney = false; // To track if the user clicked a course link
+
+
+    console.log(myModal, 'myModal')
+    let selectedPdf = ''; // To store the selected PDF path
+
+
+        // Show the form modal when any link is clicked
+        courseLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default link behavior
+                
+
+                // if user via online course clicking
+                userPdfJourney = true;
+
+                // Get the PDF file from the data-pdf attribute
+                selectedPdf = this.getAttribute('data-pdf');
+                
+                // Show the modal
+              
+                 myModal.show();  // Show the modal after 5 seconds
+            });
+        });
+
+
 // Submit form event listener 
 // Function to handle the form submission
 function submitForm(event) {
@@ -92,15 +123,24 @@ function submitForm(event) {
     // Send the form data using EmailJS
     emailjs.send("service_e6ftpmb", "template_f82vp4e", formData)
         .then(function (response) {
-            console.log("Sent successfully", response);
-            //  Hide form
+            console.log("Sent successfully", response); 
            // Hide the form
-           const form = document.getElementById("contactForm");
+           console.log(form, 'ddd');
            form.style.display = "none";
 
             // Show the thank-you message
-            const thankYouMessage = document.getElementById("thankYouMessage");
             thankYouMessage.style.display = "block";
+
+            if (userPdfJourney) {
+                // Start PDF download
+                const link = document.createElement('a');
+                link.href = './assets/pdf/'+selectedPdf; // Use the selected PDF path
+                link.download = './assets/pdf/'+selectedPdf; // Use the PDF file name for download
+                link.click(); // Programmatically trigger the download
+            }
+            
+
+          
 
             // Reset the form
             form.reset();
@@ -114,9 +154,12 @@ function submitForm(event) {
              // Hide the thank-you message after 5 seconds and show the form again
              setTimeout(() => {
                 thankYouMessage.style.display = "none";
-                form.style.display = "block";
-                console.log("Thank-you message hidden, form visible again");
+                form.style.display = "block"; 
+                
             }, 5000); // Waits for 5 seconds
+
+
+           
         },
         
         function(error) {
