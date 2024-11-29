@@ -307,10 +307,15 @@ var(--c1) 90%
 }
 .cta-row2{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    margin-top: 10px;
+   
 }
 .cta-row2 a{
     font-size: 16px;
+    flex: 1;
+    min-width: 150px;
 }
 .h{margin: 0;}
 .h span{
@@ -681,7 +686,7 @@ iframe .m7w29c{
 (max-width: 896px) and (orientation: landscape) {
 
     .navbar-brand.logo img{
-        max-height: 56px;
+        max-height: 50px;
     }
     .contact-us .container{
         border-radius: 10px;
