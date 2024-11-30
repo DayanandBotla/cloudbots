@@ -609,8 +609,10 @@ footer {
     min-width: 200px;
     flex: 1;
 }
+@media (min-width: 768px) {
 .footer-logo.linkbox {
     min-width: 350px;
+}
 }
 .linkbox--heading {
     color: #ECEFF1;
@@ -680,6 +682,51 @@ footer {
 
 iframe .m7w29c{
     display: none!important;
+}
+.modal-content{
+    border: 0;
+}
+
+@media (min-width: 767px) {
+    .modal-content{ 
+        min-width: 600px;
+    }
+}
+.modal-header{
+    background: var(--gradBg2);
+    color: #FFFFFF;
+    border: 0;
+}
+ 
+
+.formmodal{
+    display: flex; 
+    padding: 0;
+
+}
+.formcol{
+    padding: 20px;
+    width: 100%;
+    flex:1;
+}
+.formmodal .imgcol {
+    width: 40%;
+
+}
+@media (max-width: 767px) and (orientation: portrait){
+    .formmodal{
+        flex-direction: column;
+    }
+    .formmodal .imgcol {
+        width: 100%; 
+        height: 150px;
+    
+    }
+}
+.formmodal .imgcol img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width: 767px) and (orientation: portrait),
