@@ -755,6 +755,10 @@ iframe .m7w29c{
         height: 150px;
     
     }
+    .exploreOurProgrammes__list,
+    .partnerWithUs .cta{
+        min-width: 100%;
+    }
 }
 .formmodal .imgcol img{
     object-fit: cover;
@@ -766,7 +770,7 @@ iframe .m7w29c{
 (max-width: 896px) and (orientation: landscape) {
 
     .navbar-brand.logo img{
-        max-height: 50px;
+        max-height: 45px;
     }
     .contact-us .container{
         border-radius: 10px;
