@@ -558,6 +558,10 @@ a:hover{color: var(--c2);}
   
 .success-stories{
     position: relative;
+    background: url(../img/testimonials/testimonial-bg.jpg); 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-position: center; 
  
 }
 
