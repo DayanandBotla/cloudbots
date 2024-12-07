@@ -444,52 +444,7 @@
 
                 <!-- Swiper -->
                 <div class="swiper" id="testimonials">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide student-testimonials">
-                            <span>
-                            <img  class="img-fluid" src="./assets/img/testimonials/1.jpg" />     
-                            </span>                 
-                        </div> 
-                        <div class="swiper-slide student-testimonials">
-                            <span>
-                            <img  class="img-fluid" src="./assets/img/testimonials/2.jpg" />                      
-                        </span>                 
-                    </div> 
-                        <div class="swiper-slide student-testimonials">
-                            <span>
-                            <img  class="img-fluid" src="./assets/img/testimonials/3.jpg" />                      
-                        </span>                 
-                    </div> 
-                        <div class="swiper-slide student-testimonials">
-                            <span>
-                            <img  class="img-fluid" src="./assets/img/testimonials/4.jpg" />                      
-                        </span>                 
-                    </div> 
-                        <div class="swiper-slide student-testimonials">
-                            <span>
-                            <img  class="img-fluid" src="./assets/img/testimonials/5.jpg" />                      
-                        </span>                 
-                    </div> 
-                        <div class="swiper-slide student-testimonials">
-                            <span>
-                            <img  class="img-fluid" src="./assets/img/testimonials/6.jpg" />                      
-                        </span>                 
-                    </div> 
-                        <div class="swiper-slide student-testimonials">
-                            <span>
-                            <img  class="img-fluid" src="./assets/img/testimonials/7.jpg" />                      
-                        </span>                 
-                    </div> 
-                        <div class="swiper-slide student-testimonials">
-                            <span>
-                            <img  class="img-fluid" src="./assets/img/testimonials/8.jpg" />                      
-                        </span>                 
-                    </div> 
-                        <div class="swiper-slide student-testimonials">
-                            <span>
-                            <img  class="img-fluid" src="./assets/img/testimonials/9.jpg" />                      
-                        </span>                 
-                    </div> 
+                    <div class="swiper-wrapper" id="testimonialsWrapper">
 
                     </div>
                     <div class="swiper-pagination"></div>
@@ -727,11 +682,12 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/successStories.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper("#testimonials", {
-            slidesPerView: 1,
+            slidesPerView: "auto",
             spaceBetween: 10,
             autoplay: {
                 delay: 3500,

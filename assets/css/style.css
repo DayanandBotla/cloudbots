@@ -486,16 +486,22 @@ a:hover{color: var(--c2);}
 
 /* success-stories */
 
-
+ 
 .success-stories  blockquote {
-    margin: 10px 10px 0;
-    background: #FFFFFF;
+    margin: 0 auto;
+    background: var(--gradBg2);
+    color: #FFF;
     padding: 20px 60px;
     position: relative;
     border: none;
-    border-radius: 8px;
-    font-style: italic;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;  
+    text-align: center; 
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 300;
   }
 
   
@@ -503,11 +509,14 @@ a:hover{color: var(--c2);}
   .success-stories  blockquote:after {
   content: "\201C";
   position: absolute;
-  font-size: 80px;
+  font-size: 120px;
   line-height: 1;
-  color: #ced6e0;
+  color: #fff;
   font-style: normal;
   font-family: sans-serif;
+  opacity: .25;
+  mix-blend-mode: screen;
+
 }
 
 .success-stories  blockquote:before {
@@ -526,13 +535,12 @@ a:hover{color: var(--c2);}
     height: 0;
     border-left: 0 solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #FFFFFF;
-    margin: 0 0 0 60px;
+    border-top: 20px solid var(--c1);
+    margin: auto;
   }
-
-  .success-stories  p {
-    margin: 8px 0 0 20px;
-    text-align: left;
+  .success-stories  p b{font-weight: 700; font-size: 18px; color: var(--c1);}
+  .success-stories  p { 
+    text-align: center;
     color: #747d8c;
   }
 
@@ -557,11 +565,7 @@ a:hover{color: var(--c2);}
 
   
 .success-stories{
-    position: relative;
-    background: url(../img/testimonials/testimonial-bg.jpg); 
-    background-repeat: no-repeat; 
-    background-size: contain;
-    background-position: center; 
+    position: relative; 
  
 }
 
