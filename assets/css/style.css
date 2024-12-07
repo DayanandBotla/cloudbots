@@ -537,6 +537,31 @@ a:hover{color: var(--c2);}
   }
 
 
+  .student-testimonials{
+    text-align: center;
+
+  }
+  .student-testimonials span{
+    background: var(--gradBg2);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-flex;
+  }
+  .student-testimonials img{
+    
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+
+  
+.success-stories{
+    position: relative;
+ 
+}
+
+ 
 
 .contact-us {
     background: var(--gradBg2);
